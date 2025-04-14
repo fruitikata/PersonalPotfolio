@@ -1,5 +1,4 @@
-# **NALI.**
-HEWWUU ><  
-Static portfolio webpage for NALI.  
-**GROUP 1**
+# **KALI**
+OHAHA xD  
+Static personal portfolio webpage
 ### ---

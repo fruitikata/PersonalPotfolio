@@ -13,17 +13,30 @@
         <link rel="stylesheet" href="style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="icon" href="images/kaliICONtransparent.png" type="image/x-icon">
+        <link rel="icon" href="images/kTXT2.png" type="image/x-icon">
     </head>
 
     <body>
         <!-- MAIN CONTAINER START-->
+        <header class="header">
+            <a href="#home" class="logo">
+                <img src="images/kTXT.png" class="logo-img">
+            </a>
+    
+            <i class="bx bx-menu" id="menu-icon"></i>
+    
+            <nav class="navbar">
+                <a href="#about">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
 
         <!--HOME SECTION-->
         <section class="home" id="home">
             <div class="home-content">
                 <img src="images/kaliTEXT.png" class="kali-txt">
-                <p>Computer Science | Graphic Artist</p>
+                <p>DEVELOPER | DESIGNER | YAPPER</p>
                 
             </div>
                 <a href="#about" class="about-btn">MORE ABOUT KALI &#x2193;</a>
@@ -31,28 +44,46 @@
             
         </section>
 
-        <!--<header class="header">
-            <a href="#home" class="logo">
-                <img src="images/kaliICONtransparent.png" class="logo-img">
-            </a>
-    
-            <i class="bx bx-menu" id="menu-icon"></i>
-    
-            <nav class="navbar">
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>-->
-    
         <!--ABOUT SECTION-->
         <section class="about" id="about">
     
             <div class="about-img">
-                <img src="images/lain2.jpg" alt="">
+                <img src="images/kaik.jpg" alt="">
+            </div>
+
+            <div class="about-content grid">
+                <div class="about-data grid">
+                    <div class="about-info grid">
+                        <h2 class="about-name"><img src="images/kaliTEXT.png" class="kali-txt1"></h2>
+                        <p class="description">Heyho! I'm a Computer Science student exploring both software and
+                            hardware development, continuously learning through small projects. This portfolio is a growing 
+                            collection of personal projects, schoolwork, and experiments that reflect my progress and passion. 
+                            </p><br>
+                            <h1>My Coding Calamity-</h1>
+                            <p>
+                            Debugged for 10 hours… and the error? A missing colon! <br>  
+                            10/10 would do it again >< </p>
+                    </div>
+                </div>
+
+                <div class="about-skills">
+                    <h3 class="about-skills-title">SKILLS</h3>
+                    <div class="about-skills-content">
+                        <img src="images/html.png" alt="image" class="about-skills-img">
+                        <img src="images/css.png" alt="image" class="about-skills-img">
+                        <img src="images/JS.png" alt="image" class="about-skills-img">
+                        <img src="images/php.png" alt="image" class="about-skills-img">
+                        <img src="images/laravel.png" alt="image" class="about-skills-img">
+                        <img src="images/react.png" alt="image" class="about-skills-img">
+                        <img src="images/ps.png" alt="image" class="about-skills-img">
+                        <img src="images/ai.png" alt="image" class="about-skills-img">
+                        <img src="images/figma.png" alt="image" class="about-skills-img">
+                    </div>
+                </div>
             </div>
     
-            <div class="about-content">
-                <h2>ABOUT <span>NALI</span></h2>
+            <!-- <div class="about-content">
+                <h2><img src="images/kaliTEXT.png" class="kali-txt1"></h2>
                 <p>A team of creative problem-solvers committed to making your future so irresistible, 
                     it becomes inevitable. By merging advanced technology, bold design, and thoughtful development, 
                     we help businesses excel in a digital-driven world.
@@ -60,11 +91,11 @@
                     Our team is passionate about the art of creation. <br>  
                     We don't just develop-- we innovate!</p>
                     <a href="#projects" class="btn">Check Projects</a>
-            </div>
+            </div> -->
         </section>
     
         <!--PROJECTS SECTION-->
-        <section class="projects" id="projects">
+        <!-- <section class="projects" id="projects">
             
             <h2 class="heading">PROJECTS</h2>
     
@@ -92,37 +123,8 @@
                 </div>
     
             </div>
-        </section>
-    
-        <!--CONTACT SECTION-->
-        <section class="contact" id="contact">
-            <h2 class="heading">Contact <span>Us</span></h2>
-            
-            <form action="#">
-                <div class="input-group">
-                    <div class="input-box">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    
-                    <div class="input-group2">
-                        <textarea name="" id="" placeholder="Message" cols="30" rows="3" required></textarea>
-                        <input type="submit" value="Send" class="btn" onclick="Notification">
-                        
-                        
-                        <div class="notification" id="notification"></div>
-                    </div>
-                </div>
-    
-                
-    
-                
-    
-            </form>
-    
-            
-        </section>
-        
+        </section> -->
+
         <footer class="footer">
             <div class="social-icons">
                 <a href="https://github.com/">
@@ -142,5 +144,35 @@
                 © NALI | EKSDEE
             </p>
         </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const sections = document.querySelectorAll("section[id]");
+              const navLinks = document.querySelectorAll(".navbar a[href^='#']");
+          
+              if (!sections.length || !navLinks.length) return;
+          
+              window.addEventListener("scroll", () => {
+                let current = "";
+          
+                sections.forEach((section) => {
+                  const sectionTop = section.offsetTop - 120;
+                  const sectionHeight = section.offsetHeight;
+          
+                  if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                  }
+                });
+          
+                navLinks.forEach((link) => {
+                  link.classList.remove("active");
+                  if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active");
+                  }
+                });
+              });
+            });
+          </script>
+          
     </body>
 </html>

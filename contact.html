@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kali</title>
+
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+J+Guides:ital@0;1&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="icon" href="images/kTXT2.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="images/kTXT.png" class="logo-img">
+            </a>
+    
+            <i class="bx bx-menu" id="menu-icon"></i>
+    
+            <nav class="navbar">
+                <a href="index.html#about">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!--CONTACT SECTION-->
+        <section class="contact" id="contact">
+            <h2 class="heading">GET IN TOUCH WITH ME!</h2>
+            
+            <form action="#">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="input-group2">
+                        <textarea name="" id="" placeholder="Message" cols="30" rows="3" required></textarea>
+                        <input type="submit" value="Send" class="btn" onclick="Notification">
+                        
+                        
+                        <div class="notification" id="notification"></div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://github.com/">
+                    <i class="bx bxl-github"></i>
+                </a>
+
+                <a href="https://www.instagram.com/">
+                    <i class="bx bxl-instagram-alt"></i>
+                </a>
+
+                <a href="https://www.facebook.com/">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+            </div>
+
+            <p class="copyright">
+                © NALI | EKSDEE
+            </p>
+        </footer>
+
+        <script>
+            // Scroll spy functionality
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar a');
+
+            window.addEventListener('scroll', () => {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(currentSection)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

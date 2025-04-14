@@ -21,3 +21,4 @@ document.querySelector("form").addEventListener("submit", function (event) {
         }, 300); //3 secs timer
     }, 3000);
 });
+

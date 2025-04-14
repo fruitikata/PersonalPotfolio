@@ -525,6 +525,13 @@ section{
     font-size: 1.6rem;
 } */
 
+.heading1 {
+    margin-top: 10rem;
+    font-size: 3rem; 
+    color: var(--bg-color);
+    text-align: center;
+}
+
 .contact {
     background-color: #ffffff;
     /* color: var(--text-color); */
@@ -580,15 +587,108 @@ section{
     transition: opacity 0.3s ease-in-out;
 }
 
+/* FOOTER STYLES */
 .footer {
     background-color: #384158;
+    color: #ffffff;
+    padding: 2rem 0;
     width: 100%;
-    height: 35vh; 
-    padding: 2px 0;
-    position: relative;
 }
 
-.footer .social-icons{
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo-img {
+    /* margin-left: 5rem; */
+    width: 75px;
+    height: auto;
+}
+
+.footer-links {
+    margin-left: 8rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social-link {
+    color: #ffffff;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-link:hover {
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        margin: 0;
+        gap: 1rem;
+    }
+}
+
+/* .footer-copy {
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+} */
+
+/* .footer-copy{
+       
+} */
+
+/* .footer .social-icons{
     text-align: center;
 }
 
@@ -596,7 +696,7 @@ section{
     text-align: center;
     margin-top: 8px;
     font-size: 16px;
-}
+} */
 
 
 

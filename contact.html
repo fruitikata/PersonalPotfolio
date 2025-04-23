@@ -23,7 +23,7 @@
                 <img src="images/kTXT.png" class="logo-img">
             </a>
     
-            <i class="bx bx-menu" id="menu-icon"></i>
+            <div class="menu-btn"><i class="fas fa-bars"></i></div>
     
             <nav class="navbar">
                 <a href="index.html#about">About</a>
@@ -46,8 +46,6 @@
                     <div class="input-group2">
                         <textarea name="" id="" placeholder="Message" cols="30" rows="3" required></textarea>
                         <input type="submit" value="Send" class="btn" onclick="Notification">
-                        
-                        
                         <div class="notification" id="notification"></div>
                     </div>
                 </div>
@@ -114,6 +112,22 @@
                         link.classList.add('active');
                     }
                 });
+            });
+
+            const menuBtn = document.querySelector(".menu-btn");
+            const menuIcon = menuBtn.querySelector("i");
+            const navbar = document.querySelector(".navbar");
+                    
+            menuBtn.addEventListener("click", () => {
+              menuBtn.classList.toggle("active");
+              navbar.classList.toggle("active");
+            
+              // Toggle icon
+              if (menuIcon.classList.contains("fa-bars")) {
+                menuIcon.classList.replace("fa-bars", "fa-times");
+              } else {
+                menuIcon.classList.replace("fa-times", "fa-bars");
+              }
             });
         </script>
     </body>
